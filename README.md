@@ -6,7 +6,7 @@
 
 This is small application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by Javascript.
 
-The create a password you can choose from the following password criteria:
+To create a password you can choose from the following password criteria:
 
 * Length (must be between 8 and 128 characters)
 
