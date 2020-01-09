@@ -1,23 +1,29 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector('#generate');
 
+// generate random password *For now it's just generating a random number between 1 and 100
+function generatePassword() {
+	let randomNumber = Math.floor(Math.random() * 100) + 1;
+	console.log(randomNumber);
+	return randomNumber;
+}
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+	let password = generatePassword();
+	let passwordText = document.querySelector('#password');
 
-  passwordText.value = password;
+	passwordText.value = password;
 
-  copyBtn.removeAttribute("disabled");
-  copyBtn.focus();
+	//copyBtn.removeAttribute('disabled');
+	//copyBtn.focus();
 }
 
 function copyToClipboard() {
-  // BONUS 
+	// BONUS
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener('click', writePassword);
 
 // BONUS EVENT LISTENER
