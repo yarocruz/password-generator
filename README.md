@@ -1,4 +1,4 @@
-# Password / [Demo]() 
+# Password / [Demo](https://yarocruz.github.io/password-generator/develop/) 
 
 ![screenshot](assets/03-javascript-homework-demo.png)
 
@@ -30,7 +30,7 @@ Example problem.
 
 ## Demo
 
-See live demo [here](https://yarocruz.github.io/password-generator/)
+See live demo [here](https://yarocruz.github.io/password-generator/develop/)
 
 ## License 
 
