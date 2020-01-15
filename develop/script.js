@@ -27,7 +27,7 @@ function generatePassword(arr, number) {
 
 // Write password to the #password input
 function writePassword() {
-	// This line that checks if the numbers typed are actual numbers is not working as intended
+
 	let numberOfCharacters = parseInt(prompt('How many characters do you want the password to be'));
 
 	if (numberOfCharacters < 8 || numberOfCharacters > 128) {
