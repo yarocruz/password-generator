@@ -1,6 +1,6 @@
 // Assignment Code
 const generateBtn = document.querySelector('#generate');
-
+const copyBtn = document.querySelector('#copy');
 
 // ----- CHARACTER ARRAYS -------
 let lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -72,15 +72,13 @@ function writePassword() {
 
 	passwordText.value = password;
 
-	//copyBtn.removeAttribute('disabled');
-	//copyBtn.focus();
 }
 
 function copyToClipboard() {
 	// BONUS
 }
 
-// Add event listener to generate button
+// Add event listeners to generate button and copy password to clipboard
 generateBtn.addEventListener('click', writePassword);
+copyBtn.addEventListener('click', copyToClipboard);
 
-// BONUS EVENT LISTENER
