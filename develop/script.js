@@ -75,7 +75,10 @@ function writePassword() {
 }
 
 function copyToClipboard() {
-	// BONUS
+	let copyText = document.querySelector('#password');
+	copyText.select();
+	document.execCommand("copy");
+	alert(`The password ${copyText.value} has been copied to your clipboard`)
 }
 
 // Add event listeners to generate button and copy password to clipboard
