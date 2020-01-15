@@ -28,42 +28,44 @@ function generatePassword(arr, number) {
 // Write password to the #password input
 function writePassword() {
 
-	let numberOfCharacters = parseInt(prompt('How many characters do you want the password to be'));
+	let numberOfCharacters = parseInt(prompt('How many characters do you want the password to be?'));
 
 	if (numberOfCharacters < 8 || numberOfCharacters > 128) {
-		alert('Please type a number between 8 and 128');
+		alert('Please type a number between 8 and 128.');
 		return;
 	} else if (isNaN(numberOfCharacters)) {
-		alert('Please type a valid number');
+		alert('Please type a valid number.');
 		return;
 	}
 
-	let specialCharactersQuestion = confirm('Do you want special characters?');
+	let specialCharactersQuestion = confirm('Do you want special characters? Click Ok for yes, cancel for no.');
+
+	let numberQuestion = confirm('Do you want the password to have numbers? Click Ok for yes, cancel for no.');
+
+	let lowerCaseQuestion = confirm('Do you want lowercase characters? Click Ok for yes, cancel for no.');
+
+	let upperCaseQuestion = confirm('Do you want uppercase characters? Click Ok for yes, cancel for no.');
+
 
 	if (specialCharactersQuestion) {
 		randomPassword.push(specialCharacters);
-		//console.log(randomPassword);
 	}
-
-	let numberQuestion = confirm('Do you want the password to have numbers');
 
 	if (numberQuestion) {
 		randomPassword.push(numbers);
-		//console.log(randomPassword);
 	}
-
-	let lowerCaseQuestion = confirm('Do you want lowercase characters');
 
 	if (lowerCaseQuestion) {
 		randomPassword.push(lowerCase);
-		//console.log(randomPassword);
 	}
-
-	let upperCaseQuestion = confirm('Do you want uppercase characters');
 
 	if (upperCaseQuestion) {
 		randomPassword.push(upperCase);
-		//console.log(randomPassword);
+	}
+
+	else if (!specialCharactersQuestion && !numberQuestion && !lowerCaseQuestion && !upperCaseQuestion) {
+		alert('Please select at least one character type.')
+		return;
 	}
 
 	let password = generatePassword(randomPassword, numberOfCharacters);
