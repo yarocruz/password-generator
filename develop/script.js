@@ -1,6 +1,7 @@
-// Assignment Code
+// Selected elements
 const generateBtn = document.querySelector('#generate');
 const copyBtn = document.querySelector('#copy');
+let passwordText = document.querySelector('#password');
 
 // ----- CHARACTER ARRAYS -------
 let lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -14,7 +15,7 @@ let specialCharacters = ['!', '"', '#', '$', '%', '&', '(', ')', '*', '+', '?', 
 
 let randomPassword = [];
 
-// generate random password *For now it's just generating a random number between 1 and 100
+// generate random password 
 function generatePassword(arr, number) {
 	let newArray = arr.flat();
 	let newPassword = [];
@@ -70,10 +71,7 @@ function writePassword() {
 
 	let password = generatePassword(randomPassword, numberOfCharacters);
 
-	let passwordText = document.querySelector('#password');
-
 	passwordText.value = password;
-
 }
 
 function copyToClipboard() {
