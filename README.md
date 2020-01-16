@@ -18,7 +18,7 @@ This project uses plain ol' JavaScript. The trick that makes it all work is Java
 
 That hardest part of this project was figuring out how to actually randomly select from a list of different arrays. 
 
-```
+``` js
 function generatePassword(arr, number) {
 	let newArray = arr.flat();
 	let newPassword = [];
