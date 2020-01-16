@@ -16,7 +16,7 @@ This project uses plain ol' JavaScript. The trick that makes it all work is Java
 
 ## Problems / Solutions
 
-That hardest part of this project was figuring out how to actually randomly select from a list of different arrays. 
+The hardest part of this project was figuring out how to actually randomly select from a list of different arrays. 
 
 ``` js
 function generatePassword(arr, number) {
