@@ -83,5 +83,10 @@ function copyToClipboard() {
 
 // Add event listeners to generate button and copy password to clipboard
 generateBtn.addEventListener('click', writePassword);
+
 copyBtn.addEventListener('click', copyToClipboard);
+
+
+
+
 

@@ -4,29 +4,32 @@
 
 ## Description
 
-This is small application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by Javascript.
+This is a web application that generates a random password based on user-selected criteria. It randomly selects from a list of four different character types, which are [special characters]((https://www.owasp.org/index.php/Password_special_characters)), numeric characters, lowercase characters, and finally uppercase characters.
 
-To create a password you can choose from the following password criteria:
+To create a password you start by clicking on the generate password button. It will prompt the user to type in the number of characters they want. If the user types in a number that's either less than 8 or over 128, it will pop up an alert and stop the program. It also checks if the user types something other than a number and throws an alert for that as well.
 
-* Length (must be between 8 and 128 characters)
-
-* Character type:
-
-  * Special characters ([see examples](https://www.owasp.org/index.php/Password_special_characters))
-
-  * Numeric characters
-
-  * Lowercase characters
-
-  * Uppercase characters
+If it passes all the number checks, it pops up confirm boxes asking the user if they want special characters, numbers, lowercase letters, and uppercase letters. You click on OK if yes, if not you click cancel. The user has to at least select one character type, if not the program returns.
 
 ## Technologies
 
-This project uses plain ol' JavaScript. 
+This project uses plain ol' JavaScript. The trick that makes it all work is JavaScript's built in [Math Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) with it's methods like [Math.floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) and [Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) 
 
 ## Problems / Solutions
 
-Example problem.
+That hardest part of this project figuring out how to actually randomly select from a list of different arrays. 
+
+```
+function generatePassword(arr, number) {
+	let newArray = arr.flat();
+	let newPassword = [];
+	for (let i = 0; i < number; i++) {
+		let randomIndex = Math.floor(Math.random() * newArray.length - 1) + 1;
+		newPassword.push(newArray[randomIndex]);
+	}
+	return newPassword.join('');
+}
+```
+I spent more time with this function than any other line of code, specially on the line **newPassword.push(newArray[randomIndex])** 
 
 ## Demo
 
